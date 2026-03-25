@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Narendra & Sushmita — Our Story</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--rose:#d94f6b;--rose-soft:#f8d7de;--gold:#c9975b;--gold-soft:#f5e8d5;--night:#111119;--night2:#1a1a2e;--night3:#0d0d14;--cream:#fdf8f4;--warm:#f6f0ea;--ink:#222;--ink2:#555;--ink3:#999}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;transition:background .4s}
+.nav.scrolled{background:rgba(17,17,25,.92);backdrop-filter:blur(12px)}
+.nav-logo{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.1rem;font-weight:600;opacity:.7}
+.nav-links{display:flex;gap:20px}
+.nav-links a{color:rgba(255,255,255,.4);font-size:.7rem;text-decoration:none;letter-spacing:2px;text-transform:uppercase;transition:color .3s}
+.nav-links a:hover{color:var(--rose)}
+@media(max-width:600px){.nav-links{display:none}}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--night);position:relative;overflow:hidden;text-align:center;padding:40px 20px}
+.hero-glow{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;opacity:.3}
+.hero-glow.a{width:500px;height:500px;background:var(--rose);top:-120px;right:-80px;animation:drift 12s ease-in-out infinite}
+.hero-glow.b{width:400px;height:400px;background:var(--gold);bottom:-100px;left:-60px;animation:drift 15s ease-in-out infinite reverse}
+.hero-glow.c{width:300px;height:300px;background:#6c5ce7;top:50%;left:50%;transform:translate(-50%,-50%);animation:drift 18s ease-in-out infinite}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-20px)}}
+.particles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.particle{position:absolute;width:2px;height:2px;background:rgba(255,255,255,.12);border-radius:50%;animation:rise linear infinite}
+@keyframes rise{0%{opacity:0;transform:translateY(100vh) scale(0)}15%{opacity:1}85%{opacity:.4}100%{opacity:0;transform:translateY(-10vh) scale(1.5)}}
+.hero-content{z-index:2;max-width:750px}
+.hero-eyebrow{color:var(--gold);font-size:.7rem;letter-spacing:6px;text-transform:uppercase;font-weight:300;margin-bottom:20px;opacity:0;animation:fadeUp .8s .2s ease forwards}
+.hero h1{font-family:'Cormorant Garamond',serif;color:#fff;font-size:clamp(2.8rem,7vw,5.5rem);font-weight:400;line-height:1.05;margin-bottom:12px;opacity:0;animation:fadeUp 1s .4s ease forwards}
+.hero h1 .n{color:var(--rose)}.hero h1 .s{color:var(--gold)}.hero h1 .amp{font-style:italic;color:rgba(255,255,255,.2);font-size:.55em;margin:0 .15em;vertical-align:middle}
+.hero-tagline{color:rgba(255,255,255,.35);font-size:1rem;font-weight:200;letter-spacing:1px;margin-bottom:40px;opacity:0;animation:fadeUp .8s .7s ease forwards}
+.hero-tagline em{color:var(--rose);font-style:normal;font-weight:400}
+.hero-nums{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp .8s 1s ease forwards}
+.hero-num{text-align:center;min-width:80px}
+.hero-num .v{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.8rem);color:#fff;font-weight:700;line-height:1}
+.hero-num .l{color:rgba(255,255,255,.25);font-size:.6rem;letter-spacing:2px;text-transform:uppercase;font-weight:300;margin-top:2px}
+.hero-scroll{position:absolute;bottom:24px;color:rgba(255,255,255,.15);font-size:.6rem;letter-spacing:4px;text-transform:uppercase;animation:bob 2.5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+
+.origin{padding:100px 20px;background:var(--warm);text-align:center}
+.origin-card{max-width:580px;margin:0 auto;background:#fff;border-radius:24px;padding:44px 32px;box-shadow:0 24px 80px rgba(0,0,0,.05);position:relative}
+.origin-card::before{content:'💌';font-size:2rem;position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:var(--warm);padding:0 12px}
+.origin-label{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--ink3);margin-bottom:16px;font-weight:500}
+.origin-date{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--rose);margin-bottom:24px;font-weight:600}
+.origin-msg{margin-bottom:10px;padding:11px 16px;border-radius:16px;max-width:82%;font-size:.88rem;line-height:1.5}
+.origin-msg.right{background:var(--rose-soft);margin-left:auto;border-bottom-right-radius:4px}
+.origin-msg.left{background:#eef0f5;margin-right:auto;border-bottom-left-radius:4px}
+.origin-msg .who{font-size:.6rem;color:var(--ink3);margin-bottom:2px;font-weight:500;letter-spacing:1px;text-transform:uppercase}
+.origin-story{color:var(--ink2);font-size:.85rem;margin-top:24px;line-height:1.7;font-style:italic;border-top:1px solid #f0f0f0;padding-top:20px}
+
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.8rem);text-align:center;margin-bottom:6px;font-weight:600;color:var(--night)}
+.sec-sub{text-align:center;color:var(--ink3);font-weight:300;margin-bottom:44px;font-size:.9rem}
+
+.stats{padding:80px 20px;background:#fff}
+.stats-grid{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.stat{background:var(--cream);border-radius:18px;padding:24px 14px;text-align:center;transition:transform .3s;position:relative;overflow:hidden}
+.stat:hover{transform:translateY(-4px)}
+.stat::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--rose),var(--gold))}
+.stat .icon{font-size:1.5rem;margin-bottom:6px}.stat .val{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--night)}.stat .lbl{color:var(--ink3);font-size:.72rem;font-weight:300}
+
+.funfacts{padding:80px 20px;background:var(--warm)}
+.ff-grid{max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.ff{background:#fff;border-radius:20px;padding:28px;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,.03)}
+.ff .big{font-size:2.4rem;margin-bottom:6px}.ff .fact{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--night);font-weight:600;line-height:1.4;margin-bottom:4px}.ff .detail{color:var(--ink3);font-size:.78rem;font-weight:300}
+
+.timeline-sec{padding:80px 20px;background:linear-gradient(var(--cream),#fff)}
+.tl{max-width:640px;margin:0 auto;position:relative}
+.tl::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:linear-gradient(var(--rose),var(--gold),var(--rose))}
+.tl-item{padding-left:52px;margin-bottom:32px;position:relative}
+.tl-item::before{content:'';position:absolute;left:13px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--rose);border:3px solid #fff;z-index:1;box-shadow:0 0 0 4px var(--rose-soft)}
+.tl-item:nth-child(even)::before{background:var(--gold);box-shadow:0 0 0 4px var(--gold-soft)}
+.tl-year{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--rose)}.tl-item:nth-child(even) .tl-year{color:var(--gold)}
+.tl-text{color:var(--ink2);font-size:.85rem;line-height:1.65;margin-top:4px}.tl-count{font-size:.72rem;color:var(--gold);font-weight:500;margin-top:4px;font-style:italic}
+
+.wall{padding:80px 20px;background:var(--night);position:relative;overflow:hidden}
+.wall .sec-title{color:#fff}.wall .sec-sub{color:rgba(255,255,255,.25)}
+.wall-grid{max-width:1100px;margin:0 auto;columns:3;column-gap:14px}
+@media(max-width:768px){.wall-grid{columns:1}}@media(min-width:769px) and (max-width:1024px){.wall-grid{columns:2}}
+.mc{break-inside:avoid;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.05);border-radius:16px;padding:20px;margin-bottom:14px;transition:transform .3s,border-color .3s}
+.mc:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.12)}
+.mc.nar{border-left:3px solid var(--gold)}.mc.sus{border-left:3px solid var(--rose)}
+.mc .qt{color:rgba(255,255,255,.82);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;line-height:1.55;margin-bottom:8px}
+.mc .qt::before{content:'\201C';color:var(--rose);font-size:1.3rem;margin-right:2px}.mc .qt::after{content:'\201D';color:var(--rose);font-size:1.3rem;margin-left:2px}
+.mc .mt{display:flex;justify-content:space-between;align-items:center}
+.mc.nar .wh{color:var(--gold)}.mc.sus .wh{color:var(--rose)}.mc .wh{font-size:.6rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}.mc .wn{color:rgba(255,255,255,.18);font-size:.6rem}
+
+.chart-sec{padding:80px 20px;background:#fff}
+.chart-wrap{max-width:880px;margin:0 auto}.chart-area{height:240px;display:flex;align-items:flex-end;gap:2px;padding-bottom:4px}
+.bar{flex:1;border-radius:3px 3px 0 0;min-height:3px;cursor:pointer;position:relative;transition:opacity .25s;opacity:.6}.bar:hover{opacity:1}.bar.peak{opacity:1}
+.bar:hover::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--night);color:#fff;padding:4px 10px;border-radius:8px;font-size:.65rem;white-space:nowrap;z-index:5;pointer-events:none}
+.chart-yrs{max-width:880px;margin:6px auto 0;display:flex;justify-content:space-around}.chart-yrs span{font-size:.68rem;color:var(--ink3);font-weight:300}
+
+.emoji-sec{padding:80px 20px;background:var(--warm)}
+.emoji-grid{max-width:700px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.emoji-card{background:#fff;border-radius:20px;padding:20px 24px;text-align:center;min-width:110px;box-shadow:0 4px 20px rgba(0,0,0,.03);transition:transform .3s}
+.emoji-card:hover{transform:scale(1.08) rotate(-2deg)}
+.emoji-card .em{font-size:2.2rem;margin-bottom:4px}.emoji-card .ec{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--night)}.emoji-card .el{font-size:.65rem;color:var(--ink3);font-weight:300}
+
+.hours-sec{padding:80px 20px;background:#fff}
+.hours-grid{max-width:720px;margin:0 auto;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.hour-cell{width:calc(100%/8 - 8px);min-width:70px;background:var(--cream);border-radius:12px;padding:12px 8px;text-align:center;transition:transform .2s}
+.hour-cell:hover{transform:scale(1.05)}
+.hour-cell .ht{font-size:.65rem;color:var(--ink3)}.hour-cell .hb{height:6px;border-radius:3px;margin-top:6px}.hour-cell .hv{font-family:'Cormorant Garamond',serif;font-size:.85rem;font-weight:600;color:var(--night);margin-top:4px}
+
+.petnames{padding:80px 20px;background:linear-gradient(135deg,var(--rose-soft),var(--gold-soft))}
+.pn-grid{max-width:700px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.pn{background:#fff;border-radius:50px;padding:14px 28px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,.04);transition:transform .3s}.pn:hover{transform:scale(1.06)}
+.pn .nm{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--night);font-weight:600}.pn .ct{font-size:.68rem;color:var(--rose);font-weight:500}
+
+.days-sec{padding:80px 20px;background:var(--cream)}
+.days-row{max-width:700px;margin:0 auto;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.day-card{flex:1;min-width:80px;background:#fff;border-radius:16px;padding:16px 8px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.03)}
+.day-card .dn{font-size:.7rem;color:var(--ink3);margin-bottom:6px}.day-card .dv{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--night)}.day-card .db{height:4px;border-radius:2px;margin-top:8px}
+.day-card.top{border:2px solid var(--rose)}.day-card.top .dn{color:var(--rose);font-weight:500}
+
+.footer{background:var(--night3);text-align:center;padding:80px 20px 40px}
+.f-heart{font-size:2.5rem;animation:beat 1.4s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}14%{transform:scale(1.2)}28%{transform:scale(1)}42%{transform:scale(1.12)}}
+.f-quote{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,255,255,.55);font-size:1.1rem;max-width:520px;margin:16px auto 0;line-height:1.6}
+.f-quote .attr{display:block;font-size:.7rem;color:var(--gold);font-style:normal;margin-top:8px;letter-spacing:2px;text-transform:uppercase}
+.f-line{width:40px;height:1px;background:rgba(255,255,255,.08);margin:30px auto}
+.f-small{color:rgba(255,255,255,.18);font-size:.65rem;line-height:1.9}
+.rv{opacity:0;transform:translateY(22px);transition:all .7s cubic-bezier(.22,.61,.36,1)}.rv.vis{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav"><div class="nav-logo">N ❤️ S</div><div class="nav-links"><a href="#origin">Origin</a><a href="#stats">Numbers</a><a href="#timeline">Journey</a><a href="#wall">Messages</a></div></nav>
+
+<section class="hero"><div class="hero-glow a"></div><div class="hero-glow b"></div><div class="hero-glow c"></div><div class="particles" id="particles"></div><div class="hero-content"><div class="hero-eyebrow">A love story told in 4,20,123 messages</div><h1><span class="n">Narendra</span><span class="amp">&</span><span class="s">Sushmita</span></h1><div class="hero-tagline">July 1, 2021 — <em>Forever & Beyond</em> ♾️</div><div class="hero-nums"><div class="hero-num"><div class="v" data-target="420123">0</div><div class="l">Messages</div></div><div class="hero-num"><div class="v" data-target="1724">0</div><div class="l">Days</div></div><div class="hero-num"><div class="v" data-target="29073">0</div><div class="l">Sweet Words</div></div><div class="hero-num"><div class="v" data-target="58696">0</div><div class="l">We Laughed</div></div></div></div><div class="hero-scroll">scroll to begin ↓</div></section>
+
+<section class="origin" id="origin"><div class="origin-card rv"><div class="origin-label">Where It All Began</div><div class="origin-date">July 1, 2021</div><div class="origin-msg left"><div class="who">Narendra</div>*Sent a message... then unsent it* 😅</div><div class="origin-msg right"><div class="who">Sushmita</div>Ohh toh unsend ku kr diya tha 😅</div><div class="origin-msg left"><div class="who">Narendra</div>I thought it's not good to send someone msg who don't even know u 😅</div><div class="origin-msg right"><div class="who">Sushmita</div>Kya msg tha? 🙄</div><div class="origin-msg left"><div class="who">Narendra</div>Kuch nhi just asking are u doing prep for IAS?</div><div class="origin-msg right"><div class="who">Sushmita</div>😍</div><div class="origin-story">One unsent message. One curious "kya msg tha?" And then... 4,20,123 messages later, we're still talking. Our story began with a shy "unsend" and a brave question. ❤️</div></div></section>
+
+<section class="stats" id="stats"><h2 class="sec-title rv">Our Love in Numbers</h2><p class="sec-sub rv">Every number is a piece of our story</p><div class="stats-grid"><div class="stat rv"><div class="icon">💌</div><div class="val">4,20,123</div><div class="lbl">Total Messages</div></div><div class="stat rv"><div class="icon">🤣</div><div class="val">58,696</div><div class="lbl">Times We Laughed</div></div><div class="stat rv"><div class="icon">💕</div><div class="val">29,073</div><div class="lbl">Sweet Nothings</div></div><div class="stat rv"><div class="icon">📹</div><div class="val">1,321</div><div class="lbl">Video Calls</div></div><div class="stat rv"><div class="icon">🎬</div><div class="val">39,210</div><div class="lbl">Reels We Shared</div></div><div class="stat rv"><div class="icon">📸</div><div class="val">6,025</div><div class="lbl">Photos Sent</div></div><div class="stat rv"><div class="icon">👦</div><div class="val">2,00,377</div><div class="lbl">His Messages</div></div><div class="stat rv"><div class="icon">👧</div><div class="val">2,19,746</div><div class="lbl">Her Messages</div></div></div></section>
+
+<section class="funfacts"><h2 class="sec-title rv">Fun Facts About Us</h2><p class="sec-sub rv">The numbers behind our love story</p><div class="ff-grid"><div class="ff rv"><div class="big">244</div><div class="fact">Messages Every Day</div><div class="detail">One message every 6 minutes on average!</div></div><div class="ff rv"><div class="big">🕙</div><div class="fact">10 AM is Our Time</div><div class="detail">57,362 messages at 10 AM — our peak hour</div></div><div class="ff rv"><div class="big">☀️</div><div class="fact">Sundays Are Ours</div><div class="detail">63,104 messages — we talk most when we're free</div></div><div class="ff rv"><div class="big">🏆</div><div class="fact">Jan 2022 — Our Record</div><div class="detail">23,137 messages in one month — ~750/day!</div></div><div class="ff rv"><div class="big">🤣</div><div class="fact">1,23,720 times 🤣</div><div class="detail">Our #1 emoji — we can't stop laughing</div></div><div class="ff rv"><div class="big">💋</div><div class="fact">14,765 Kisses Sent</div><div class="detail">😘 — saying what words can't</div></div></div></section>
+
+<section class="timeline-sec" id="timeline"><h2 class="sec-title rv">Our Journey Together</h2><p class="sec-sub rv">From an unsent message to forever plans</p><div class="tl"><div class="tl-item rv"><div class="tl-year">July 2021 — The Spark</div><div class="tl-text">A message sent and unsent. "Kya msg tha?" she asked. That curiosity changed everything. "Pyrr se bolte h 🤣" — and our love story began.</div><div class="tl-count">4,391 messages in our first month</div></div><div class="tl-item rv"><div class="tl-year">Jan 2022 — The Explosion</div><div class="tl-text">Our peak month — 23,137 messages! ~750 a day. "Babu", "Baby", "Jaan" — we couldn't stop. "Tumre naina hamko ghayal kr deyta" 💘</div><div class="tl-count">Record: 23,137 messages in one month!</div></div><div class="tl-item rv"><div class="tl-year">2022 — The Golden Year</div><div class="tl-text">1.85 lakh messages! "Lolo laal meri 😘", "Kitni tadap uthti hai dil mai tumhare deedar k liye" — pure romance, endless video calls, couple reel marathons.</div><div class="tl-count">1,85,000+ messages — our biggest year</div></div><div class="tl-item rv"><div class="tl-year">2023 — Growing Deeper</div><div class="tl-text">"Mera pati tmse acha h sumjhe" — claiming each other. "Mera aadmi h marad 🤣" — the possessiveness of real love. Bubu-dudu reels and playful fights.</div><div class="tl-count">1,26,000+ messages this year</div></div><div class="tl-item rv"><div class="tl-year">2024 — Real Plans</div><div class="tl-text">"Meri aurat" became our signature. Shaadi talks got real. "Bs hm tm... ek room Shimla Kashmir me... 2 din." Travel dreams and forever plans.</div><div class="tl-count">Dreams turning into plans</div></div><div class="tl-item rv"><div class="tl-year">2025 — Soulmates</div><div class="tl-text">"Tu meri zindagi ka wo hissa hai jo complete nahi hota jab tak tu mere paas na ho." Deep love. "Bs biwi ko hmesha khus rkhna" 🥺</div><div class="tl-count">Every word weighted with meaning</div></div><div class="tl-item rv"><div class="tl-year">2026 — & Beyond ♾️</div><div class="tl-text">"I love so so much 💚" on Valentine's. Still laughing, still teasing, still deeply in love. "Meri aurat", "Mera aadmi" — two souls who found home in each other.</div><div class="tl-count">The best chapters are still unwritten...</div></div></div></section>
+
+<section class="wall" id="wall"><h2 class="sec-title">Things We Said to Each Other</h2><p class="sec-sub">The sweetest words from 4.2 lakh messages</p><div class="wall-grid" id="wallGrid"></div></section>
+
+<section class="chart-sec"><h2 class="sec-title rv">Our Messages Over Time</h2><p class="sec-sub rv">Every bar is a month of our love — hover to explore</p><div class="chart-wrap"><div class="chart-area" id="chartArea"></div><div class="chart-yrs" id="chartYrs"></div></div></section>
+
+<section class="emoji-sec"><h2 class="sec-title rv">Our Favourite Emojis</h2><p class="sec-sub rv">2,72,000+ emojis sent — here are our top ones</p><div class="emoji-grid"><div class="emoji-card rv"><div class="em">🤣</div><div class="ec">1,23,720</div><div class="el">Our #1 emoji</div></div><div class="emoji-card rv"><div class="em">😅</div><div class="ec">37,129</div><div class="el">Sheepish grin</div></div><div class="emoji-card rv"><div class="em">😂</div><div class="ec">34,493</div><div class="el">Tears of joy</div></div><div class="emoji-card rv"><div class="em">😘</div><div class="ec">32,312</div><div class="el">Kisses sent</div></div><div class="emoji-card rv"><div class="em">😍</div><div class="ec">14,959</div><div class="el">Heart eyes</div></div><div class="emoji-card rv"><div class="em">❤️</div><div class="ec">24,781</div><div class="el">Pure love</div></div><div class="emoji-card rv"><div class="em">🥺</div><div class="ec">4,439</div><div class="el">Puppy eyes</div></div><div class="emoji-card rv"><div class="em">😌</div><div class="ec">5,219</div><div class="el">Content & calm</div></div></div></section>
+
+<section class="hours-sec"><h2 class="sec-title rv">When We Talk the Most</h2><p class="sec-sub rv">Our busiest hour: 10 AM with 57,362 messages!</p><div class="hours-grid" id="hoursGrid"></div></section>
+
+<section class="petnames"><h2 class="sec-title rv">What We Call Each Other</h2><p class="sec-sub rv">Said with love, 14,000+ times across 4 years</p><div class="pn-grid"><div class="pn rv"><div class="nm">Babu / Baby</div><div class="ct">7,982 times</div></div><div class="pn rv"><div class="nm">Jaan</div><div class="ct">3,533 times</div></div><div class="pn rv"><div class="nm">Paglu / Pagal</div><div class="ct">552 times</div></div><div class="pn rv"><div class="nm">Meri Aurat / Mera Aadmi</div><div class="ct">471 times</div></div><div class="pn rv"><div class="nm">Raja / Rani</div><div class="ct">276 times</div></div><div class="pn rv"><div class="nm">Lolo / Nunnu / Chunnu</div><div class="ct">our special ones 💛</div></div></div></section>
+
+<section class="days-sec"><h2 class="sec-title rv">Our Favourite Day to Talk</h2><p class="sec-sub rv">Sunday wins! We talk most when we're free together</p><div class="days-row" id="daysRow"></div></section>
+
+<div class="footer"><div class="f-heart">❤️</div><div class="f-quote">Tu meri zindagi ka wo hissa hai jo kabhi complete nahi hota jab tak tu mere paas na ho. Din bhar main chillata, hasta, kaam karta hoon… par dil ke andar sirf ek hi awaaz ghoomti hai — Lolo…<span class="attr">— Narendra to Sushmita</span></div><div class="f-line"></div><div class="f-small">4,20,123 messages · 1,724 days · 1 love story<br>From one unsent message to forever<br><br>Built with ❤️ from our Instagram chats</div></div>
+
+<script>
+const pc=document.getElementById('particles');for(let i=0;i<50;i++){const p=document.createElement('div');p.className='particle';p.style.cssText=`left:${Math.random()*100}%;animation-delay:${Math.random()*10}s;animation-duration:${8+Math.random()*14}s`;pc.appendChild(p)}
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>80)});
+const cObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('[data-target]').forEach(el=>{const t=+el.dataset.target;let c=0;const s=t/(2000/16);(function u(){c+=s;if(c>=t){el.textContent=t.toLocaleString('en-IN');return}el.textContent=Math.floor(c).toLocaleString('en-IN');requestAnimationFrame(u)})()});cObs.disconnect()}})},{threshold:.3});
+cObs.observe(document.querySelector('.hero-nums'));
+
+const Q=[{t:"Pyrr se bolte h 🤣🤣🤣",s:"sus",d:"Jul 2021"},{t:"Miss kr diya hmne aaj ka chand",s:"nar",d:"Oct 2021"},{t:"Tumre naina hamko aise dekhen hai ke ghayal kr deyta hmre dil ko",s:"nar",d:"Jan 2022"},{t:"Ku ke yrr tumre dil itna pure hai nah itna acha hai ke pucho nah",s:"nar",d:"Mar 2022"},{t:"Kitni tadap uthti hai dil mai tumhare deedar k liye",s:"nar",d:"May 2022"},{t:"Lolo laal meri 😘",s:"nar",d:"Jul 2022"},{t:"Mera dimaag Road pe tha bs rama devi aa jae 🤣",s:"sus",d:"Aug 2022"},{t:"Phone nikle mai jaan nikl gae thi",s:"nar",d:"Dec 2022"},{t:"Hmne kha nh hm nh dekhge mera aadmi h marad 🤣🤣",s:"sus",d:"Mar 2023"},{t:"Meri baat hi nh mnti h",s:"sus",d:"Jun 2023"},{t:"Mera pati tmse Acha h sumjhe",s:"sus",d:"Jul 2023"},{t:"Baby jaaya kro yaad hmko fir chije sunne ko milti hai",s:"nar",d:"Aug 2023"},{t:"Mera bacha ❤️❤️❤️",s:"nar",d:"Dec 2023"},{t:"Hmko bs ek room dedo Shimla Kashmir me... bs hm tm 2 din",s:"sus",d:"Feb 2024"},{t:"Mera baby mujhe kitna sumjhti hai 😍😍❤️😘",s:"nar",d:"Feb 2024"},{t:"Baby mera raja baja du tera baja 😂😘😘",s:"sus",d:"May 2024"},{t:"Meri aurat ❤️ i luv u so much mera bacha 💞💕",s:"nar",d:"Mar 2024"},{t:"Haaye mai to maar jaawa 😘 yay photo bhut cute hai 💗",s:"nar",d:"Jul 2024"},{t:"Luv u to meri choti jaan 😘🫂",s:"nar",d:"Dec 2024"},{t:"Meri lolo ❤️🫂",s:"nar",d:"May 2025"},{t:"I love you 🤣🤣🤣",s:"sus",d:"Jul 2025"},{t:"Tu meri zindagi ka wo hissa hai jo kabhi complete nahi hota jab tak tu mere paas na ho",s:"nar",d:"Sep 2025"},{t:"Are meri jaan such me i love you 🥰",s:"sus",d:"Sep 2025"},{t:"Bs biwi ko apni tm hmesha khus rkhna",s:"sus",d:"Oct 2025"},{t:"i love you so much mera bum 💋💋",s:"sus",d:"Oct 2025"},{t:"Pyrr deyti raha kro mujhe 😎❤️🫂",s:"nar",d:"Nov 2025"},{t:"Mja aatai hai ree dil ko sukoon 💕😌❤️",s:"nar",d:"Nov 2025"},{t:"Yay meri aurat 🤣🤣🤭",s:"nar",d:"Mar 2026"},{t:"Yeh mera aadmi",s:"sus",d:"Mar 2026"},{t:"I luv u too 💕😚",s:"nar",d:"Mar 2026"},{t:"Yeh gunda mera",s:"sus",d:"Mar 2026"},{t:"Babu yrr isme tm hero lgte ho",s:"sus",d:"Mar 2026"},{t:"Haayw 🥹🥹 rulaa diya babu",s:"nar",d:"Mar 2026"},{t:"Babu aise kro kiss",s:"sus",d:"Mar 2026"},{t:"I love so so much 💚💚 or shadi baad meri gadhi dho dena 🤣",s:"sus",d:"Feb 2026"},{t:"Haaye luv u mera bacha ❤️",s:"nar",d:"Feb 2026"},{t:"Mera chunnu sa bacha ❤️😘",s:"nar",d:"Feb 2026"},{t:"So jaa mera paglu babu 💓❣️❤️😘",s:"nar",d:"Dec 2024"},{t:"Tabhi mai sochu jab se aap mili ho mera sanni ku bhri hai 🫠",s:"nar",d:"Mar 2026"},{t:"Yeh mera babu h 🤣🤣🤣",s:"sus",d:"Mar 2026"},{t:"Dard dey k pyrr kro to jada pyrr shumj aata hai",s:"nar",d:"Oct 2025"},{t:"Jb hme pyrr ata h na babu same yhi lgta h",s:"sus",d:"Jan 2026"},{t:"Mera babu aisa pyrr krta h hme 🥺",s:"sus",d:"May 2025"},{t:"Suno size meri chudi ka 2 h 🤣",s:"sus",d:"Oct 2021"}];
+const wg=document.getElementById('wallGrid');Q.forEach(q=>{const c=document.createElement('div');c.className=`mc ${q.s}`;c.innerHTML=`<div class="qt">${q.t}</div><div class="mt"><span class="wh">${q.s==='nar'?'— Narendra':'— Sushmita'}</span><span class="wn">${q.d}</span></div>`;wg.appendChild(c)});
+
+const M={"2021-07":1200,"2021-08":2800,"2021-09":4391,"2021-10":14113,"2021-11":15559,"2021-12":19245,"2022-01":23137,"2022-02":17561,"2022-03":17692,"2022-04":17040,"2022-05":15765,"2022-06":17010,"2022-07":14311,"2022-08":14140,"2022-09":10321,"2022-10":8779,"2022-11":9338,"2022-12":6222,"2023-01":6127,"2023-02":9749,"2023-03":11543,"2023-04":13590,"2023-05":12841,"2023-06":13716,"2023-07":12745,"2023-08":11328,"2023-09":8064,"2023-10":8425,"2023-11":9334,"2023-12":8188,"2024-01":7473,"2024-02":5643,"2024-03":3961,"2024-04":2383,"2024-05":1954,"2024-06":2906,"2024-07":1829,"2024-09":1329,"2024-10":1017,"2024-11":700,"2024-12":1307,"2025-01":1016,"2025-02":1559,"2025-03":1468,"2025-04":1502,"2025-05":4118,"2025-06":2304,"2025-07":1658,"2025-08":938,"2025-09":798,"2025-10":1054,"2025-11":873,"2025-12":251,"2026-01":737,"2026-02":674,"2026-03":274};
+const mN=['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const ca=document.getElementById('chartArea');const mx=Math.max(...Object.values(M));
+Object.entries(M).forEach(([k,v])=>{const b=document.createElement('div');b.className='bar'+(v===mx?' peak':'');b.style.height=(v/mx*220)+'px';b.style.background=v>10000?'linear-gradient(180deg,var(--rose),#e8838f)':'linear-gradient(180deg,var(--gold),#d4b78a)';const[y,m]=k.split('-');b.setAttribute('data-tip',`${mN[+m]} ${y}: ${v.toLocaleString('en-IN')}`);ca.appendChild(b)});
+['2021','2022','2023','2024','2025','2026'].forEach(y=>{const s=document.createElement('span');s.textContent=y;document.getElementById('chartYrs').appendChild(s)});
+
+const hrs={0:16224,1:17765,2:17031,3:14870,4:14032,5:14165,6:18563,7:20058,8:22791,9:43093,10:57362,11:28604,12:5066,13:638,14:463,15:716,16:2193,17:9113,18:18050,19:22096,20:19907,21:18689,22:18798,23:19836};
+const hg=document.getElementById('hoursGrid');const hmax=57362;
+const hl=['12am','1am','2am','3am','4am','5am','6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm','9pm','10pm','11pm'];
+Object.entries(hrs).forEach(([h,v])=>{const c=document.createElement('div');c.className='hour-cell rv';const p=v/hmax*100;c.innerHTML=`<div class="ht">${hl[h]}</div><div class="hb" style="width:${p}%;background:linear-gradient(90deg,${p>60?'var(--rose)':'var(--gold)'},${p>60?'#e8838f':'#d4b78a'})"></div><div class="hv">${(v/1000).toFixed(1)}k</div>`;hg.appendChild(c)});
+
+const dys={Mon:59822,Tue:59648,Wed:57445,Thu:57487,Fri:61164,Sat:61453,Sun:63104};
+const dr=document.getElementById('daysRow');const dmax=63104;
+Object.entries(dys).forEach(([d,v])=>{const c=document.createElement('div');c.className='day-card rv'+(v===dmax?' top':'');c.innerHTML=`<div class="dn">${d}</div><div class="dv">${(v/1000).toFixed(1)}k</div><div class="db" style="width:${(v/dmax*100)}%;background:${v===dmax?'var(--rose)':'var(--gold)'}"></div>`;dr.appendChild(c)});
+
+new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.06}).observe(document.body);
+document.querySelectorAll('.rv').forEach(el=>{new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.06}).observe(el)});
+</script>
+</body>
+</html>
